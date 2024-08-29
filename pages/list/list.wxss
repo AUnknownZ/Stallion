@@ -1,0 +1,36 @@
+/* pages/list/list.wxss */
+.container2{
+  display: flex;
+  align-items:baseline;
+  gap: 40px;
+}
+.title{
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}
+.left_tab view{
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+}
+.container1 view{
+  height: 50px;
+  line-height: 40px;
+  background-color: white;
+}
+.container1{
+  height: 580px;
+}
+.swiper_contianer{
+  height: 150px;
+  width: 250px;
+  text-align: center;
+}
+.item{
+  height: 150px;
+}
+.admin-button {
+  padding: 100px;
+}

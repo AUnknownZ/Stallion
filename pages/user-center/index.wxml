@@ -1,0 +1,71 @@
+<!--pages/user-center/index.wxml-->
+<view wx:if = "{{!hasUserInfo}}">
+  <view class="page_container">
+    <view class="top_bg"/>
+      <view class="main_content">
+        <view class="userinfo_container">
+            <button class = "login-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">Login</button>
+        </view>
+      
+
+      <view class="settings_container">
+        <view class="setting_item" bind:tap="gotoReward">
+          <view class="left">
+            <image class="setting_icon" src="../../images/icons/customer-service.svg" />
+            <button class="contact-button">
+              Rewards
+            </button>
+          </view>
+          <image class="arrow_icon" src="../../images/icons/arrow.svg" />
+        </view>
+        <view class="setting_item" bind:tap="gotoTeam">
+          <view class="left">
+            <image class="setting_icon" src="../../images/icons/share.svg" />
+            <view class="setting_text">Team</view>
+          </view>
+          <image class="arrow_icon" src="../../images/icons/arrow.svg" />
+        </view>
+      </view>
+
+      <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
+    </view>
+    </view>
+
+    
+</view>
+
+<view wx:else>
+  <view class="page_container">
+    <view class="top_bg"/>
+      <view class="main_content">
+        <view class="userinfo_container">
+            <image src = "{{userInfo.avatarUrl}}" alt="用户头像" class="avatar"></image>
+            <view>Welcome,</view>
+            <text>{{userInfo.nickName}}</text>
+        </view>
+      
+
+      <view class="settings_container">
+        <view class="setting_item" bind:tap="gotoReward">
+          <view class="left">
+            <image class="setting_icon" src="../../images/icons/customer-service.svg" />
+            <button class="contact-button">
+              Rewards
+            </button>
+          </view>
+          <image class="arrow_icon" src="../../images/icons/arrow.svg" />
+        </view>
+        <view class="setting_item" bind:tap="gotoTeam">
+          <view class="left">
+            <image class="setting_icon" src="../../images/icons/share.svg" />
+            <view class="setting_text">Team</view>
+          </view>
+          <image class="arrow_icon" src="../../images/icons/arrow.svg" />
+        </view>
+      </view>
+      <button class= "logout-btn" bindtap = "logout" style="position: relative; left: -8rpx; top: 513rpx">Log out</button>
+      <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
+    </view>
+    </view>
+</view>
+

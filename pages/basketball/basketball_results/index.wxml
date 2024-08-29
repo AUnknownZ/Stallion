@@ -1,0 +1,14 @@
+<!--pages/football/football_results/index.wxml-->
+<view class = "page_container">
+  <view class = "title" style = "font-size: x-large;">Basketball</view>
+</view>
+<view class = "margin"></view>
+<view class = "tab_container">
+  <button class = "Roster"size="mini">Roster</button>
+  <button class = "News"size="mini">News</button>
+  <button class = "Results"size="mini">Results</button>
+</view>
+<view class = "results">
+    <view>11/11/2023</view>
+    <view>Win</view>
+</view>

@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="points-section">
+    <text class="points-text">Points: {{points}}</text>
+  </view>
+  
+  <view class="rewards-section">
+    <text class="section-title">Available Rewards</text>
+    <block wx:for="{{rewards}}" wx:key="id">
+      <view class="reward-item" bindtap="purchaseReward" data-id="{{item.id}}">
+        <image class="reward-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="reward-info">
+          <text class="reward-name">{{item.name}}</text>
+          <text class="reward-points">{{item.points}} points</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="user-stock-section">
+    <text class="section-title">Your Purchased Items</text>
+    <block wx:for="{{userStock}}" wx:key="id">
+      <view class="reward-item">
+        <image class="reward-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="reward-info">
+          <text class="reward-name">{{item.name}}</text>
+          <text class="reward-count">x{{item.count}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

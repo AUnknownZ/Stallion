@@ -1,0 +1,36 @@
+/* pages/basketball/index.wxss */
+.page_container view{
+  background-color: lightyellow;
+}
+.title{
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}
+.item{
+  width:360px;
+
+}
+/* pages/football/index.wxss */
+.page_container view{
+  background-color: lightyellow;
+}
+.title{
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}
+.margin{
+  height: 100px;
+}
+.tab_container view{
+  height: 50px;
+}
+.roster_names{
+  width: 50px;
+  text-align: left;
+  border: gray;
+}
+.roster_names view:nth-child(1){
+  background-color: gray;
+}

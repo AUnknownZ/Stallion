@@ -1,0 +1,17 @@
+<!--pages/football/football_news/index.wxml-->
+<view class="container">
+  <view class="section">
+    <text class="section-title">News</text>
+    <view class="news-list">
+      <block wx:for="{{news}}" wx:key="title">
+        <view class="news-item" bindtap="gotolink" data-url="{{item.url}}">
+          <view class="news-header">
+            <text class="news-title">{{item.title}}</text>
+            <text class="news-date">{{item.date}}</text>
+          </view>
+          <text class="news-description">{{item.description}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

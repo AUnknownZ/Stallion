@@ -1,0 +1,40 @@
+<!-- pages/football/index.wxml -->
+<view class="page_container">
+    <view class="title">Stallions Sports Team</view>
+    <image src="/images/logo.jpg" class="logo" mode="widthFix"></image>
+    <view class="tabs">
+        <view class="tab" bindtap="switchTab" data-tab="news" wx:class="{{currentTab === 'news' ? 'active' : ''}}">News</view>
+        <view class="tab" bindtap="switchTab" data-tab="results" wx:class="{{currentTab === 'results' ? 'active' : ''}}">Results</view>
+        <view class="tab" bindtap="switchTab" data-tab="roster" wx:class="{{currentTab === 'roster' ? 'active' : ''}}">Roster</view>
+    </view>
+    <view wx:if="{{currentTab === 'news'}}" class="content">
+        <block wx:for="{{news}}" wx:key="id" wx:for-item="item">
+            <view class="news_item" bindtap="viewArticle" data-url="{{item.url}}">
+                <view>
+                  <view class="news_title">{{item.title}}</view>
+                  <view class="news_description">{{item.description}}</view>
+                  <view class="news_date">{{item.date}}</view>
+                </view>
+                <image src = "{{item.image}}" class="news_image" mode = "widthFix"></image>
+            </view>
+        </block>
+    </view>
+    <view wx:if="{{currentTab === 'results'}}" class="content">
+        <block wx:for="{{results}}" wx:key="id" wx:for-item="item">
+            <view class="result_item">
+                <view class="result_date">{{item.date}}</view>
+                <view class="result_match">{{item.home}} vs {{item.away}}</view>
+                <view class="result_score">{{item.home_score}} - {{item.away_score}}</view>
+                <view class="result_status" style="color:{{item.statusColor}}">{{item.status}}</view>
+            </view>
+        </block>
+    </view>
+    <view wx:if="{{currentTab === 'roster'}}" class="content">
+        <block wx:for="{{roster}}" wx:key="id" wx:for-item="item">
+            <view class="roster_item">
+                <view class="roster_name">{{item.name}}</view>
+                <view class="roster_number">{{item.number}}</view>
+            </view>
+        </block>
+    </view>
+</view>

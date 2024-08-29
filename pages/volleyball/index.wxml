@@ -1,0 +1,6 @@
+<!--pages/volleyball/index.wxml-->
+<view class = "page_container">
+  <view class = "title" style = "font-size: x-large;">Volleyball</view>
+
+</view>
+<image class = "item" src = "/images/volleyball.jpg" mode = "widthFix"></image>

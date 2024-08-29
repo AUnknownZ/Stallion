@@ -1,0 +1,62 @@
+/* pages/football/index.wxss */
+.page_container {
+  text-align: center;
+  background-color: lightyellow;
+}
+.title {
+  text-align: center;
+  font-size: x-large;
+  margin: 20px 0;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.active {
+  background-color: #d3d3d3;
+  font-weight: bold;
+}
+.content {
+  padding: 20px;
+  text-align: left;
+}
+.result_item, .roster_item {
+  gap: 3px;
+  margin: 10px 0;
+  display: flex;
+}
+.news_item{
+  margin: 10px 0;
+  gap: 3px;
+  display: flex;
+}
+.news_title, .result_match, .roster_name {
+  font-weight: bold;
+}
+.news_description {
+  font-style: italic;
+}
+.result_status {
+  font-weight: bold;
+}
+.result_item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.result_date, .result_match, .result_score, .result_status {
+  flex: 1;
+}

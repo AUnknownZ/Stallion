@@ -1,0 +1,55 @@
+<!-- pages/admin/admin.wxml -->
+<view class="page_container">
+    <!-- Sport Selector -->
+    <picker mode="selector" range="{{sports}}" bindchange="onSportChange">
+        <view class="picker">
+            Current Sport: {{currentSport}}
+        </view>
+    </picker>
+
+    <!-- Form Selector -->
+    <picker mode="selector" range="{{formTypes}}" bindchange="onFormChange">
+        <view class="picker">
+            Current Form: {{currentForm}}
+        </view>
+    </picker>
+
+    <!-- Add News Form -->
+    <view wx:if="{{currentForm === 'News'}}" class="form_section">
+        <text class="form_title">Add News</text>
+        <form bindsubmit="submitNews">
+            <input name="title" placeholder="Title" />
+            <input name="description" placeholder="Description" />
+            <input name="date" placeholder="Date (YYYY-MM-DD)" />
+            <input name="url" placeholder="URL" />
+            <view>
+                <button bindtap="chooseImage">Choose Image</button>
+                <image src="{{newsImage}}" mode="widthFix" wx:if="{{newsImage}}" style="width: 100px; margin-top: 10px;"/>
+            </view>
+            <button formType="submit">Submit News</button>
+        </form>
+    </view>
+
+    <!-- Add Result Form -->
+    <view wx:if="{{currentForm === 'Results'}}" class="form_section">
+        <text class="form_title">Add Result</text>
+        <form bindsubmit="submitResult">
+            <input name="date" placeholder="Date (YYYY-MM-DD)" />
+            <input name="home" placeholder="Home Team" />
+            <input name="away" placeholder="Away Team" />
+            <input name="home_score" placeholder="Home Score" />
+            <input name="away_score" placeholder="Away Score" />
+            <button formType="submit">Submit Result</button>
+        </form>
+    </view>
+
+    <!-- Add Roster Form -->
+    <view wx:if="{{currentForm === 'Roster'}}" class="form_section">
+        <text class="form_title">Add Roster</text>
+        <form bindsubmit="submitRoster">
+            <input name="name" placeholder="Player Name" />
+            <input name="number" placeholder="Player Number" />
+            <button formType="submit">Submit Roster</button>
+        </form>
+    </view>
+</view>

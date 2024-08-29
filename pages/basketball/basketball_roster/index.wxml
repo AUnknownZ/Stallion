@@ -1,0 +1,13 @@
+<!--pages/football/football_roster/index.wxml-->
+<view class = "page_container">
+  <view class = "title" style = "font-size: x-large;">Football</view>
+</view>
+<view class = "margin"></view>
+<view class = "tab_container">
+  <button class = "Roster"size="mini">Roster</button>
+  <button class = "News"size="mini">News</button>
+  <button class = "Results"size="mini">Results</button>
+</view>
+<view class = "roster_names">
+  <view>Gavin</view>
+</view>

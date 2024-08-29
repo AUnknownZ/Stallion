@@ -1,0 +1,42 @@
+<!--pages/list/list.wxml-->
+<view class = "container2">
+  <view class = "left_tab">
+    <view style = "font-size:14px;">Stallion Teams</view>
+    <scroll-view class = "container1" scroll-y >
+      <view bind:tap="gotowxfootballpage">Football</view>
+      <view bind:tap="gotowxbasketballpage">Basketball</view>
+      <view bind:tap="gotowxvolleyballpage">Volleyball</view>
+      <view>Swimming</view>
+      <view>Table Tennis</view>
+      <view>Track</view>
+      <view>Tennis</view>
+      <view>Ice Hockey</view>
+      <view>Baseball</view>
+      <view>Darts</view>
+      <view>Rugby</view>
+      <view>Cheerleading</view>
+      <view>Lacrosse</view>
+      <view>Rowing</view>
+      <view>Chess</view>
+      
+    </scroll-view>
+  </view>
+  <view class = "News">
+    <image class = "item" src = "/images/logo.jpg" mode = "heightFix" style="position: relative; left: -69rpx; top: 0rpx; width: 381rpx; height: 262rpx; display: inline-block; box-sizing: border-box"></image>
+    <view class = "title" style = "font-size: x-large;">Stallions News</view>
+    <swiper class = "swiper_contianer" indicator-dots autoplay circular>
+      <swiper-item>
+        <image class = "item" src = "{{imgSrc}}" mode = "heightFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class = "item" src = "/images/pic1.png" mode = "heightFix"></image>
+      </swiper-item>
+    </swiper>
+    <view class = "title" style = "font-size: x-large;">Upcoming Games</view>
+    <view class = "title" style = "font-size: x-large;">Previous Games</view>
+  </view>
+</view>
+<view class="admin-button">
+  <!-- Admin Navigation Button -->
+  <button type="primary" bindtap="navigateToAdmin">Go to Admin Page</button>
+  </view>

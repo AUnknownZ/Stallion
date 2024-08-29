@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/login/index",
+    "pages/user-center/index",
+    "pages/football/index",
+    "pages/basketball/index",
+    "pages/volleyball/index",
+    "pages/reward/index",
+    "pages/personal_team/index",
+    "pages/logs/logs",
+    "pages/football/football_roster/index",
+    "pages/football/football_results/index",
+    "pages/football/football_news/index",
+    "pages/basketball/basketball_roster/index",
+    "pages/basketball/basketball_results/index",
+    "pages/webview/webview",
+    "pages/admin/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Stallions",
+    "navigationBarBackgroundColor": "#ffdf0f",
+    "enablePullDownRefresh": true
+  },
+  "permission":{
+    "scope.userInfo":{
+      "desc":"用于获取您的昵称，头像等信息"
+    }
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#A2A9B0",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "Home",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/user-center/index",
+        "text": "User",
+        "iconPath": "images/icons/usercenter.png",
+        "selectedIconPath": "images/icons/usercenter-active.png"
+      }
+    ]
+  }
+}
