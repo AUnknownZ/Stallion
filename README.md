@@ -1,2 +1,2 @@
-# Stallion
+# Stallions
 Stallions Mini Program
